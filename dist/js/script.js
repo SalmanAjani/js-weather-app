@@ -28,7 +28,8 @@ locationBtn.addEventListener("click", () => {
 
 const onSuccess = (position) => {
   const { latitude, longitude } = position.coords;
-  api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=c779ca55affafcf05a287be0676a481f`;
+  api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=409665676f8840c3644f7e5a82323c8f
+`;
   fetchData();
 };
 
@@ -38,7 +39,8 @@ const onError = (error) => {
 };
 
 const requestApi = (city) => {
-  api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=c779ca55affafcf05a287be0676a481f`;
+  api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=409665676f8840c3644f7e5a82323c8f
+`;
   fetchData();
 };
 
@@ -61,18 +63,20 @@ const weatherDetails = (info) => {
     const { description, id } = info.weather[0];
     const { feels_like, humidity, temp } = info.main;
 
+    console.log(id);
+
     if (id == 800) {
       wIcon.src = "img/clear.svg";
-    } else if (id >= 200 && id <= 232) {
-      wIcon.src = "img/storm.svg";
     } else if (id >= 600 && id <= 622) {
       wIcon.src = "img/snow.svg";
-    } else if (id >= 701 && id <= 781) {
-      wIcon.src = "img/haze.svg";
     } else if (id >= 801 && id <= 804) {
       wIcon.src = "img/cloud.svg";
-    } else if ((id >= 500 && id <= 531) || (id >= 300 && id <= 321)) {
+    } else if (id >= 500 && id <= 531) {
       wIcon.src = "img/rain.svg";
+    } else if (id >= 701 && id <= 781) {
+      wIcon.src = "img/haze.svg";
+    } else if (id >= 200 && id <= 232) {
+      wIcon.src = "img/storm.svg";
     }
 
     wrapper.querySelector(".temp .numb").innerText = Math.floor(temp);
