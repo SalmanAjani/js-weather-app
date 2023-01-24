@@ -66,17 +66,17 @@ const weatherDetails = (info) => {
     console.log(id);
 
     if (id == 800) {
-      wIcon.src = "img/clear.svg";
+      wIcon.src = "img/sunny.png";
     } else if (id >= 600 && id <= 622) {
-      wIcon.src = "img/snow.svg";
+      wIcon.src = "img/snow.png";
     } else if (id >= 801 && id <= 804) {
-      wIcon.src = "img/cloud.svg";
+      wIcon.src = "img/cloud.png";
     } else if (id >= 500 && id <= 531) {
-      wIcon.src = "img/rain.svg";
+      wIcon.src = "img/rain.png";
     } else if (id >= 701 && id <= 781) {
-      wIcon.src = "img/haze.svg";
+      wIcon.src = "img/haze.png";
     } else if (id >= 200 && id <= 232) {
-      wIcon.src = "img/storm.svg";
+      wIcon.src = "img/storm.png";
     }
 
     wrapper.querySelector(".temp .numb").innerText = Math.floor(temp);
