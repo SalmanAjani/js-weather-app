@@ -10,6 +10,9 @@
 <li>Different icons according to the weather conditions.</li>
 </ul>
 
+<h2>🔗 Link</h2>
+https://js-weather-app-0426.netlify.app/
+
 <h2>Tech Stack:</h2>
 <li>HTML</li>
 <li>CSS</li>
