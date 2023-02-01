@@ -16,3 +16,5 @@
 <li>JavaScript</li>
 
 <h2>Screenshots:</h2>
+<img src="https://user-images.githubusercontent.com/107462726/215989428-13b521db-52f8-4563-b662-d5b0f374cdd1.png" alt="w1"/>
+<img src="https://user-images.githubusercontent.com/107462726/215989478-f3946403-d9bd-4ff6-a643-988e8eb6ca15.png" alt="w2"/>
